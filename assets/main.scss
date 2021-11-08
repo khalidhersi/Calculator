@@ -1,0 +1,21 @@
+@media screen and (min-width: 400px) {  
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }    
+
+        .grid__items {
+            background-color: orange ;
+            border-radius: 500px;
+        }
+        .numbers {
+            background-color: grey ;
+            border-radius: 500px;
+        }
+        .answer-bar {
+            background-color: #131313 ;
+            border-radius: 500px;
+        }
+    }
+

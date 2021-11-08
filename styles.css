@@ -1,0 +1,38 @@
+@media screen and (min-width: 400px) {
+  .calculator-container {
+    display: grid;
+    background-color: #131313;
+    height: 40rem;
+    width: 20em;
+    border-radius: 50px;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: repeat(7, 5rem);
+  }
+}
+@media screen and (min-width: 400px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid__items {
+    background-color: orange;
+    border-radius: 500px;
+  }
+
+  .numbers {
+    background-color: grey;
+    border-radius: 500px;
+  }
+
+  .answer-bar {
+    background-color: #131313;
+    border-radius: 500px;
+  }
+}
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  background-color: #fdfdfd;
+}
