@@ -13,12 +13,12 @@ $primary-font-family: 'Inter', sans-serif;
         border-radius: 500px;
         font-size: 2.5em;
         text-align: center;
-        padding-top: 9px;
     }
 
     .grid__items,
     .numbers,
     .answer-bar {
         color: $fifth-color;
+        font-size: bold;
     }
 }

@@ -3,6 +3,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .calculator-container {
+            border: 10px solid $quatertiary-color;
+            border-radius: 60px;
+        }
         }    
 
         .symbols{
