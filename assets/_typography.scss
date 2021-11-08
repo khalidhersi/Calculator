@@ -1,1 +1,24 @@
+@import "./variations";
+
 $primary-font-family: 'Inter', sans-serif;
+
+@media screen and (min-width: 400px) {  
+
+    .calculator,
+    .grid__items,
+    .numbers,
+    .answer-bar,
+    .symbols
+    {
+        border-radius: 500px;
+        font-size: 2.5em;
+        text-align: center;
+        padding-top: 9px;
+    }
+
+    .grid__items,
+    .numbers,
+    .answer-bar {
+        color: $fifth-color;
+    }
+}

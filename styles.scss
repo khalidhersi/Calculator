@@ -1,10 +1,10 @@
-@import "./assets/grid";
-@import "./assets/typography";
-@import "./assets/variations";
+@import "./assets/_grid";
+@import "./assets/_typography";
+@import "./assets/_variations";
 @import "./assets/main.scss";
 
 * {
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    background-color: #fdfdfd;
+    font-family: $primary-font-family;
+    background-color: $fifth-color;
 }

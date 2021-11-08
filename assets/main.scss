@@ -5,17 +5,17 @@
         align-items: center;
         }    
 
+        .symbols{
+            background-color: $quatertiary-color;
+        }
         .grid__items {
-            background-color: orange ;
-            border-radius: 500px;
+            background-color: $tertiary-color;
         }
         .numbers {
-            background-color: grey ;
-            border-radius: 500px;
+            background-color: $secondary-color;
         }
         .answer-bar {
-            background-color: #131313 ;
-            border-radius: 500px;
+            background-color: $primary-color;
         }
     }
 

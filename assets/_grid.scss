@@ -1,14 +1,122 @@
+@import "./variations";
+
 @media screen and (min-width: 400px) {  
-        .calculator-container {
-                display: grid;
-                background-color: #131313;
-                height: 40rem;
-                width: 20em;
-                border-radius: 50px;
-                grid-template-columns: repeat(4, 5rem);
-                grid-template-rows: repeat(7, 5rem);
-            }
-            
-        
-        }    
+
+    .calculators__items {
+        display: grid;
+        background-color: $primary-color;
+        height: 40rem;
+        width: 20em;
+        border-radius: 50px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(7, 4.5em);
+        gap: 10px;
+
+        #black__spacr{
+            grid-column: 1 / 4;
+            grid-row: 1 / 1;
+        }
+
+        #answer__box{
+            grid-column: 1 / 4;
+            grid-row: 2 / 2;
+
+        }
+
+        #AC{
+            grid-column: 1 / 2;
+            grid-row: 3 / 3;
+        }
+
+        #fractions{
+            grid-column: 2 / 3;
+            grid-row: 3 / 3;
+        }
+
+        #percentage{
+            grid-column: 3 / 4;
+            grid-row: 3 / 3;
+        }
+
+        #divide{
+            grid-column: 4 / 5;
+            grid-row: 3 / 3;
+        }
+        #seven{
+            grid-column: 1 / 2;
+            grid-row: 4 / 4;
+        }
+
+        #eight{
+            grid-column: 2 / 3;
+            grid-row: 4 / 4;
+        }
+
+        #nine{
+            grid-column: 3 / 4;
+            grid-row: 4 / 4;
+        }
+
+        #times{
+            grid-column: 4 / 5;
+            grid-row: 4 / 4;
+        }
+
+        #four{
+            grid-column: 1 / 2;
+            grid-row: 5 / 5;
+        }
+
+        #five{
+            grid-column: 2 / 3;
+            grid-row: 5 / 5;
+        }
+        #six{
+            grid-column: 3 / 4;
+            grid-row: 5 / 5;
+        }
+
+        #minus{
+            grid-column: 4 / 5;
+            grid-row: 5 / 5;
+        }
+
+        #one{
+            grid-column: 1 / 2;
+            grid-row: 6 / 6;
+        }
+
+        #two{
+            grid-column: 2 / 3;
+            grid-row: 6 / 6;
+        }
+
+        #three{
+            grid-column: 3 / 4;
+            grid-row: 6 / 6;
+        }
+
+        #add{
+            grid-column: 4 / 5;
+            grid-row: 6 / 6;
+        }
+
+        #zero{
+            grid-column: 1 / 3;
+            grid-row: 7 / 7;
+        }
+
+        #point{
+            grid-column: 3 / 4;
+            grid-row: 7 / 7;
+        }
+
+        #equals{
+            grid-column: 4 / 5;
+            grid-row: 7 / 7;
+        }        
+
+    }
+
+}    
 
