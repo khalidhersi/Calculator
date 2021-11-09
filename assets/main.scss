@@ -7,6 +7,7 @@
         .calculator-container {
             border: 10px solid $quatertiary-color;
             border-radius: 60px;
+
         }
         }    
 
@@ -22,5 +23,11 @@
         .answer-bar {
             background-color: $primary-color;
         }
+
+        .landscape__buttons {
+           background-color: $sixth-color;
+        }
+
     }
+
 

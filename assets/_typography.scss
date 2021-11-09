@@ -8,17 +8,22 @@ $primary-font-family: 'Inter', sans-serif;
     .grid__items,
     .numbers,
     .answer-bar,
-    .symbols
+    .symbols,
+    .landscape__buttons
     {
         border-radius: 500px;
         font-size: 2.5em;
         text-align: center;
     }
 
+    .landscape__buttons {
+        font-size: 1.3em;
+    }
+
     .grid__items,
     .numbers,
-    .answer-bar {
+    .answer-bar, 
+    .landscape__buttons {
         color: $fifth-color;
-        font-size: bold;
     }
 }
