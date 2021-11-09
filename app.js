@@ -4,17 +4,20 @@ const buttons = document.querySelectorAll("button");
 const input = document.querySelector("#input");
 const output = document.querySelector("#black__space");
 const numbers = document.querySelectorAll(".numbers");
-console.log(numbers.innerText)
+const ei = document.querySelector("#eight")
 
-console.log(numbers)
+console.log(numbers);
 
-const calculate = (number) => {
-    input.value += number;
+const listOfNum = numbers.forEach((num) => {
+    num.innerText})
+    
+const calculate = () => {
+    input.value += listOfNum;
+    console.log(input.value)
 } 
 
-const numArr = numbers.map(calculate)
+input.addEventListener("click", calculate)
 
-numbers.addEventListener("click", calculate)
 
 
  /* button visibility after click 
@@ -30,4 +33,15 @@ numbers.addEventListener("click", calculate)
 
     })
 })
+
+
+
+const calculate = (number) => {
+    input.value += number;
+} 
+
+const numArr = numbers.map(calculate)
+
+numbers.addEventListener("click", calculate)
+
 */
