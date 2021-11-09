@@ -16,13 +16,13 @@
         <!--(mobile buttons) calculator-->
         <div class="calculator-container">
             <div class="calculators__items">
-                <div class="answer-bar" id="black__spacr"></div>
-                <div class="answer-bar" id="answer__box"></div>
+                <div class="answer-bar" id="black__space"></div>
+                <div class="answer-bar" id="answer__box"><input id="input" type="name" placeholder="0"> </div>
                 <button class="symbols" id="AC">AC</button>
                 <button class="symbols" id="fractions">1/2</button>
                 <button class="symbols" id="percentage">%</button>
                 <button class="grid__items" id="divide">/</button>
-                <button class="numbers" id="seven">7</button>
+                <button onclick="calculate(7)" class="numbers" id="seven">7</button>
                 <button class="numbers" id="eight">8</button>
                 <button class="numbers" id="nine">9</button>
                 <button class="grid__items" id="times">x</button>
@@ -72,5 +72,6 @@
             </div>
         </div>
     </main>
+    <script src="./app.js" defer async></script>
 </body>
 </html>
