@@ -124,13 +124,13 @@
 
 }    
 
-@media screen and (min-width: 700px) {  
+@media screen and (min-width: 960px) {  
 
     .calculators__items {
         display: grid;
         background-color: $primary-color;
-        height: 50rem;
-        width: 82em;
+        height: 47rem;
+        width: 68em;
         padding: 0 30px 20px 30px;
         border-radius: 50px;
         grid-template-columns: repeat(10, 1fr);
