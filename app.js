@@ -1,22 +1,54 @@
 const calculatorItems = document.querySelector(".calculators__items");
-const numericalFunctions = document.querySelector(".grid__items");
+const numericalOperation = document.querySelector(".grid__items");
 const buttons = document.querySelectorAll("button");
 const input = document.querySelector("#input");
-const output = document.querySelector("#black__space");
+const output = document.querySelector("#output");
+const screen = document.querySelectorAll(".answer-bar")
 const numbers = document.querySelectorAll(".numbers");
-const ei = document.querySelector("#eight")
+const equals = document.querySelectorAll("#equals");
+const decimal = document.querySelectorAll("#point");
+const numArr = numbers.innerText;
+const times = document.querySelector("#times")
+const clear = document.querySelector("#AC")
+const backSpace = document.querySelector("#backspace")
+const percentage = document.querySelector("#percentage")
 
-console.log(numbers);
 
-const listOfNum = numbers.forEach((num) => {
-    num.innerText})
-    
-const calculate = () => {
-    input.value += listOfNum;
-    console.log(input.value)
-} 
+let oneDecimal = true;
+let outputDisplay = "";
+let inputDisplay = "";
+let result = null;
 
-input.addEventListener("click", calculate)
+
+
+numbers.forEach((num) => {
+    num.addEventListener('click', (event) => {
+        inputDisplay += event.target.innerText
+        input.value = inputDisplay
+    })
+ });
+
+
+ numericalOperation.forEach((operation) => {
+    operation.addEventListener('click', (event) => {
+        const operationType = event.target.innerText
+        if (input && output ){
+            mathOperation()
+        } else {
+            result = parseFloat(output)
+        }
+        moveInput(operationType)
+     })
+     console.log(result)
+ })
+
+ const moveInput = (name = "") => {
+    output = input  + "" + name + "";
+    outputDisplay.innerText = output;
+    inputDisplay.innerText = "";
+    input = "";
+}
+
 
 
 
@@ -34,7 +66,29 @@ input.addEventListener("click", calculate)
     })
 })
 
+console.log(numbers.innerText)
+console.log(numArr)
 
+let arr = [];
+
+numbers.forEach((num) => {
+   let listOfNum = num.innerText
+    arr.push(Array(listOfNum))
+})
+
+
+backSpace.addEventListener("click" , () => {
+    screen.backSpace();
+})
+
+equals.addEventListener("click" , () => {
+    screen.generateResult()
+})
+
+
+
+
+console.log(arr)
 
 const calculate = (number) => {
     input.value += number;
