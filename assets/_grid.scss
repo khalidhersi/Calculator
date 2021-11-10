@@ -7,6 +7,7 @@
         background-color: $primary-color;
         height: 40rem;
         width: 20em;
+        padding: 15px;
         border-radius: 50px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(7, 4.5em);
@@ -29,7 +30,9 @@
                 background-color: $primary-color;
                 color: $fifth-color;
                 border: none;
-                font-size: 2em;
+                font-size: 0.6em;
+                text-align: right;
+                opacity: 50%;
             }
         }
 
@@ -46,8 +49,8 @@
                 background-color: $primary-color;
                 color: $fifth-color;
                 border: none;
-                font-size: 2em;
-                opacity: 70%;
+                font-size: 1.2em;
+                text-align: right;
             }
         }
 
@@ -180,7 +183,8 @@
                 background-color: $primary-color;
                 color: $fifth-color;
                 border: none;
-                font-size: 1.2em;
+                font-size: 0.7em;
+                opacity: 50%;
             }
         }
 
@@ -197,8 +201,7 @@
                 background-color: $primary-color;
                 color: $fifth-color;
                 border: none;
-                font-size: 1.2em;
-                opacity: 70%;
+                font-size: 1.4em;
             }
         }
 

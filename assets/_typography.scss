@@ -2,10 +2,10 @@
 
 $primary-font-family: 'Inter', sans-serif;
 
-@media screen and (min-width: 400px) {  
 
     .calculator,
     .grid__items,
+    .equals,
     .numbers,
     .answer-bar,
     .symbols,
@@ -14,6 +14,7 @@ $primary-font-family: 'Inter', sans-serif;
         border-radius: 500px;
         font-size: 2.5em;
         text-align: center;
+        border: none;
     }
 
     .landscape__buttons {
@@ -22,8 +23,8 @@ $primary-font-family: 'Inter', sans-serif;
 
     .grid__items,
     .numbers,
+    .equals,
     .answer-bar, 
     .landscape__buttons {
         color: $fifth-color;
     }
-}

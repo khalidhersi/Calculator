@@ -1,5 +1,5 @@
 const calculatorItems = document.querySelector(".calculators__items");
-const numericalOperation = document.querySelector(".grid__items");
+const numericalOperations = document.querySelectorAll(".grid__items");
 const buttons = document.querySelectorAll("button");
 const input = document.querySelector("#input");
 const output = document.querySelector("#output");
@@ -17,6 +17,7 @@ const percentage = document.querySelector("#percentage")
 let oneDecimal = true;
 let outputDisplay = "";
 let inputDisplay = "";
+let lastOperation = "";
 let result = null;
 
 
@@ -28,29 +29,28 @@ numbers.forEach((num) => {
     })
  });
 
-
- numericalOperation.forEach((operation) => {
+ console.log(numericalOperations)
+ 
+numericalOperations.forEach((operation) => {
     operation.addEventListener('click', (event) => {
+        if(!inputDisplay) return
         const operationType = event.target.innerText
-        if (input && output ){
+        if (outputDisplay && inputDisplay && lastOperation){
             mathOperation()
         } else {
-            result = parseFloat(output)
+            result = parseFloat(inputDisplay)
         }
         moveInput(operationType)
+        console.log(result)
      })
-     console.log(result)
  })
 
  const moveInput = (name = "") => {
-    output = input  + "" + name + "";
-    outputDisplay.innerText = output;
-    inputDisplay.innerText = "";
-    input = "";
+    outputDisplay += inputDisplay  + " " + name + " ";
+    output.value = outputDisplay;
+    input.value = "";
+    inputDisplay = "";
 }
-
-
-
 
  /* button visibility after click 
  buttons.map(button => {
@@ -97,5 +97,25 @@ const calculate = (number) => {
 const numArr = numbers.map(calculate)
 
 numbers.addEventListener("click", calculate)
+
+ numericalOperation.forEach((operation) => {
+    operation.addEventListener('click', (event) => {
+        const operationType = event.target.innerText
+        if (input && output ){
+            mathOperation()
+        } else {
+            result = parseFloat(output)
+        }
+        moveInput(operationType)
+     })
+     console.log(result)
+ })
+
+
+
+
+
+
+
 
 */
