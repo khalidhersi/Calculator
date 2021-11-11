@@ -1,30 +1,28 @@
 @import "./variations";
 
-$primary-font-family: 'Inter', sans-serif;
+$primary-font-family: "Inter", sans-serif;
 
+.calculator,
+.grid__items,
+.equals,
+.numbers,
+.answer-bar,
+.symbols,
+.landscape__buttons {
+  border-radius: 500px;
+  font-size: 2.5em;
+  text-align: center;
+  border: none;
+}
 
-    .calculator,
-    .grid__items,
-    .equals,
-    .numbers,
-    .answer-bar,
-    .symbols,
-    .landscape__buttons
-    {
-        border-radius: 500px;
-        font-size: 2.5em;
-        text-align: center;
-        border: none;
-    }
+.landscape__buttons {
+  font-size: 1.3em;
+}
 
-    .landscape__buttons {
-        font-size: 1.3em;
-    }
-
-    .grid__items,
-    .numbers,
-    .equals,
-    .answer-bar, 
-    .landscape__buttons {
-        color: $fifth-color;
-    }
+.grid__items,
+.numbers,
+.equals,
+.answer-bar,
+.landscape__buttons {
+  color: $fifth-color;
+}

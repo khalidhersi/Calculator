@@ -1,44 +1,53 @@
-@media screen and (min-width: 400px) {  
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-        .calculator-container {
-            border: 10px solid $quatertiary-color;
-            border-radius: 60px;
-            box-shadow: 0px 0px 30px 25px #9b9b9b;
-        }
-        }    
-
-        .symbols{
-            background-color: $quatertiary-color;
-        }
-        .grid__items, 
-        .equals{
-            background-color: $tertiary-color;
-        }
-        .numbers {
-            background-color: $secondary-color;
-        }
-        .answer-bar {
-            background-color: $primary-color;
-        }
-
-        .landscape__buttons {
-           background-color: $sixth-color;
-        }
-        .numbers:active {
-            background-color: rgb(179, 179, 179);
-        }
-        .grid__items:active {
-            background-color: rgb(255, 208, 122);
-        }
-        .symbols:active {
-            background-color: rgb(255, 255, 255);
-        }
-        
-
-    }
+  .calculator-container {
+    border: 10px solid $quatertiary-color;
+    border-radius: 60px;
+    box-shadow: 0px 0px 30px 25px #9b9b9b;
+    position: relative;
+    right: 3px;
+    top: 30px;
+  }
+  
+  @media screen and (min-width: 1100px) {  
+    .calculator-container {
+        border: 10px solid $quatertiary-color;
+        border-radius: 60px;
+        box-shadow: 0px 0px 17px 12px #9b9b9b;
+        position: relative;
+        right: 3px;
+        top: 15px;
+      }
+}
 
 
+  .symbols {
+    background-color: $quatertiary-color;
+  }
+  .grid__items,
+  .equals {
+    background-color: $tertiary-color;
+  }
+  .numbers {
+    background-color: $secondary-color;
+  }
+  .answer-bar {
+    background-color: $primary-color;
+  }
+
+  .landscape__buttons {
+    background-color: $sixth-color;
+  }
+  .numbers:active {
+    background-color: rgb(179, 179, 179);
+  }
+  .grid__items:active {
+    background-color: rgb(255, 208, 122);
+  }
+  .symbols:active {
+    background-color: rgb(255, 255, 255);
+  }
+}

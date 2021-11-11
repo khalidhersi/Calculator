@@ -123,7 +123,252 @@
     grid-row: 7/7;
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 810px) {
+  .calculators__items {
+    display: grid;
+    background-color: #000000;
+    height: 40rem;
+    width: 49em;
+    padding: 0 30px 20px 30px;
+    border-radius: 50px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(9, 4.5em);
+    gap: 10px;
+    /* (mobile buttons) calculator */
+    /* (PC buttons) calculator */
+  }
+  .calculators__items .landscape__buttons {
+    display: block;
+  }
+  .calculators__items #black__space {
+    grid-column: 1/11;
+    grid-row: 1/1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+  .calculators__items #black__space #output {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    background-color: #000000;
+    color: #fdfdfd;
+    border: none;
+    font-size: 0.7em;
+    opacity: 50%;
+  }
+  .calculators__items #answer__box {
+    grid-column: 7/11;
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+  .calculators__items #answer__box #input {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    background-color: #000000;
+    color: #fdfdfd;
+    border: none;
+    font-size: 1.4em;
+  }
+  .calculators__items #AC {
+    grid-column: 7/8;
+    grid-row: 3/3;
+  }
+  .calculators__items #backspace {
+    grid-column: 8/9;
+    grid-row: 3/3;
+  }
+  .calculators__items #percentage {
+    grid-column: 9/10;
+    grid-row: 3/3;
+  }
+  .calculators__items #divide {
+    grid-column: 10/11;
+    grid-row: 3/3;
+  }
+  .calculators__items #seven {
+    grid-column: 7/8;
+    grid-row: 4/4;
+  }
+  .calculators__items #eight {
+    grid-column: 8/9;
+    grid-row: 4/4;
+  }
+  .calculators__items #nine {
+    grid-column: 9/10;
+    grid-row: 4/4;
+  }
+  .calculators__items #times {
+    grid-column: 10/11;
+    grid-row: 4/4;
+  }
+  .calculators__items #four {
+    grid-column: 7/8;
+    grid-row: 5/5;
+  }
+  .calculators__items #five {
+    grid-column: 8/9;
+    grid-row: 5/5;
+  }
+  .calculators__items #six {
+    grid-column: 9/10;
+    grid-row: 5/5;
+  }
+  .calculators__items #minus {
+    grid-column: 10/11;
+    grid-row: 5/5;
+  }
+  .calculators__items #one {
+    grid-column: 7/8;
+    grid-row: 6/6;
+  }
+  .calculators__items #two {
+    grid-column: 8/9;
+    grid-row: 6/6;
+  }
+  .calculators__items #three {
+    grid-column: 9/10;
+    grid-row: 6/6;
+  }
+  .calculators__items #add {
+    grid-column: 10/11;
+    grid-row: 6/6;
+  }
+  .calculators__items #zero {
+    grid-column: 7/9;
+    grid-row: 7/7;
+  }
+  .calculators__items #point {
+    grid-column: 9/10;
+    grid-row: 7/7;
+  }
+  .calculators__items #equals {
+    grid-column: 10/11;
+    grid-row: 7/7;
+  }
+  .calculators__items #bracket__right {
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+  .calculators__items #bracket__left {
+    grid-column: 2/3;
+    grid-row: 3/3;
+  }
+  .calculators__items #mc {
+    grid-column: 3/4;
+    grid-row: 3/3;
+  }
+  .calculators__items #m__plus {
+    grid-column: 4/5;
+    grid-row: 3/3;
+  }
+  .calculators__items #m__minus {
+    grid-column: 5/6;
+    grid-row: 3/3;
+  }
+  .calculators__items #fraction {
+    grid-column: 6/7;
+    grid-row: 3/3;
+  }
+  .calculators__items #powersec {
+    grid-column: 1/2;
+    grid-row: 4/4;
+  }
+  .calculators__items #x2 {
+    grid-column: 2/3;
+    grid-row: 4/4;
+  }
+  .calculators__items #x3 {
+    grid-column: 3/4;
+    grid-row: 4/4;
+  }
+  .calculators__items #xy {
+    grid-column: 4/5;
+    grid-row: 4/4;
+  }
+  .calculators__items #ex {
+    grid-column: 5/6;
+    grid-row: 4/4;
+  }
+  .calculators__items #timesten {
+    grid-column: 6/7;
+    grid-row: 4/4;
+  }
+  .calculators__items #one-over-x {
+    grid-column: 1/2;
+    grid-row: 5/5;
+  }
+  .calculators__items #second-rtx {
+    grid-column: 2/3;
+    grid-row: 5/5;
+  }
+  .calculators__items #third-rtx {
+    grid-column: 3/4;
+    grid-row: 5/5;
+  }
+  .calculators__items #yrootx {
+    grid-column: 4/5;
+    grid-row: 5/5;
+  }
+  .calculators__items #ln {
+    grid-column: 5/6;
+    grid-row: 5/5;
+  }
+  .calculators__items #log10 {
+    grid-column: 6/7;
+    grid-row: 5/5;
+  }
+  .calculators__items #x-fractoral {
+    grid-column: 1/2;
+    grid-row: 6/6;
+  }
+  .calculators__items #sin {
+    grid-column: 2/3;
+    grid-row: 6/6;
+  }
+  .calculators__items #cos {
+    grid-column: 3/4;
+    grid-row: 6/6;
+  }
+  .calculators__items #tan {
+    grid-column: 4/5;
+    grid-row: 6/6;
+  }
+  .calculators__items #e {
+    grid-column: 5/6;
+    grid-row: 6/6;
+  }
+  .calculators__items #ee {
+    grid-column: 6/7;
+    grid-row: 6/6;
+  }
+  .calculators__items #red {
+    grid-column: 1/2;
+    grid-row: 7/7;
+  }
+  .calculators__items #sinh {
+    grid-column: 2/3;
+    grid-row: 7/7;
+  }
+  .calculators__items #cosh {
+    grid-column: 3/4;
+    grid-row: 7/7;
+  }
+  .calculators__items #tanh {
+    grid-column: 4/5;
+    grid-row: 7/7;
+  }
+  .calculators__items #pi {
+    grid-column: 5/6;
+    grid-row: 7/7;
+  }
+  .calculators__items #rand {
+    grid-column: 6/7;
+    grid-row: 7/7;
+  }
+}
+@media screen and (min-width: 1100px) {
   .calculators__items {
     display: grid;
     background-color: #000000;
@@ -142,7 +387,7 @@
   }
   .calculators__items #black__space {
     grid-column: 1/11;
-    grid-row: 2/2;
+    grid-row: 1/1;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
@@ -155,10 +400,12 @@
     border: none;
     font-size: 0.7em;
     opacity: 50%;
+    position: relative;
+    top: 20px;
   }
   .calculators__items #answer__box {
     grid-column: 7/11;
-    grid-row: 3/3;
+    grid-row: 2/3;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
@@ -169,7 +416,9 @@
     background-color: #000000;
     color: #fdfdfd;
     border: none;
-    font-size: 1.4em;
+    font-size: 2.2em;
+    position: relative;
+    top: 40px;
   }
   .calculators__items #AC {
     grid-column: 7/8;
@@ -208,11 +457,11 @@
     grid-row: 6/6;
   }
   .calculators__items #five {
-    grid-column: 9/10;
+    grid-column: 8/9;
     grid-row: 6/6;
   }
   .calculators__items #six {
-    grid-column: 8/9;
+    grid-column: 9/10;
     grid-row: 6/6;
   }
   .calculators__items #minus {
@@ -224,11 +473,11 @@
     grid-row: 7/7;
   }
   .calculators__items #two {
-    grid-column: 9/10;
+    grid-column: 8/9;
     grid-row: 7/7;
   }
   .calculators__items #three {
-    grid-column: 8/9;
+    grid-column: 9/10;
     grid-row: 7/7;
   }
   .calculators__items #add {
@@ -393,51 +642,55 @@
   color: #fdfdfd;
 }
 
-@media screen and (min-width: 400px) {
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .calculator-container {
+  border: 10px solid #b9b9b9;
+  border-radius: 60px;
+  box-shadow: 0px 0px 30px 25px #9b9b9b;
+  position: relative;
+  right: 3px;
+  top: 30px;
+}
+@media screen and (min-width: 1100px) {
   main .calculator-container {
     border: 10px solid #b9b9b9;
     border-radius: 60px;
-    box-shadow: 0px 0px 30px 25px #9b9b9b;
-  }
-
-  .symbols {
-    background-color: #b9b9b9;
-  }
-
-  .grid__items,
-.equals {
-    background-color: orange;
-  }
-
-  .numbers {
-    background-color: #494949;
-  }
-
-  .answer-bar {
-    background-color: #000000;
-  }
-
-  .landscape__buttons {
-    background-color: #353535;
-  }
-
-  .numbers:active {
-    background-color: #b3b3b3;
-  }
-
-  .grid__items:active {
-    background-color: #ffd07a;
-  }
-
-  .symbols:active {
-    background-color: white;
+    box-shadow: 0px 0px 17px 12px #9b9b9b;
+    position: relative;
+    right: 3px;
+    top: 15px;
   }
 }
+main .symbols {
+  background-color: #b9b9b9;
+}
+main .grid__items,
+main .equals {
+  background-color: orange;
+}
+main .numbers {
+  background-color: #494949;
+}
+main .answer-bar {
+  background-color: #000000;
+}
+main .landscape__buttons {
+  background-color: #353535;
+}
+main .numbers:active {
+  background-color: #b3b3b3;
+}
+main .grid__items:active {
+  background-color: #ffd07a;
+}
+main .symbols:active {
+  background-color: white;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
