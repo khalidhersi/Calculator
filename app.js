@@ -1,3 +1,4 @@
+/* Consts defined */
 const calculatorItems = document.querySelector(".calculators__items");
 const numericalOperations = document.querySelectorAll(".grid__items");
 const buttons = document.querySelectorAll("button");
@@ -13,15 +14,15 @@ const clear = document.querySelector("#AC")
 const backSpace = document.querySelector("#backspace")
 const percentage = document.querySelector("#percentage")
 
-
+/* variables to be changed */
 let oneDecimal = true;
 let outputDisplay = "";
 let inputDisplay = "";
-let lastOperation = "";
+let operationPressed = "";
 let result = null;
 
 
-
+/* turning buttons into numbers to be displayed in input */
 numbers.forEach((num) => {
     num.addEventListener('click', (event) => {
         inputDisplay += event.target.innerText
@@ -31,12 +32,14 @@ numbers.forEach((num) => {
 
  console.log(numericalOperations)
  
+
+ /* What happens when a button is pressed */
 numericalOperations.forEach((operation) => {
     operation.addEventListener('click', (event) => {
         if(!inputDisplay) return
         const operationType = event.target.innerText
         if (outputDisplay && inputDisplay && lastOperation){
-            mathOperation()
+            mathCalculation()
         } else {
             result = parseFloat(inputDisplay)
         }
@@ -45,12 +48,29 @@ numericalOperations.forEach((operation) => {
      })
  })
 
+ /*  Moving input from input to output after being pressed */
  const moveInput = (name = "") => {
     outputDisplay += inputDisplay  + " " + name + " ";
     output.value = outputDisplay;
     input.value = "";
     inputDisplay = "";
 }
+/* Math Calculations after being pressed */
+const mathCalculation = () => {
+    if (operationPressed == "/") {
+        parseFloat(result) /= inputDisplay
+    } else if (operationPressed == "x") {
+        parseFloat(result) *= inputDisplay
+    } else if (operationPressed == "-") {
+        parseFloat(result) -= inputDisplay
+    }  else if (operationPressed == "+") {
+        parseFloat(result) += inputDisplay
+    } else if (operationPressed == "x") {
+        parseFloat(result) *= inputDisplay
+    }
+};
+
+
 
  /* button visibility after click 
  buttons.map(button => {
