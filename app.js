@@ -6,7 +6,7 @@ const input = document.querySelector("#input");
 const output = document.querySelector("#output");
 const screen = document.querySelectorAll(".answer-bar")
 const numbers = document.querySelectorAll(".numbers");
-const equals = document.querySelectorAll("#equals");
+const equals = document.querySelector("#equals");
 const decimal = document.querySelectorAll("#point");
 const numArr = numbers.innerText;
 const times = document.querySelector("#times")
@@ -15,64 +15,97 @@ const backSpace = document.querySelector("#backspace")
 const percentage = document.querySelector("#percentage")
 
 /* variables to be changed */
-let oneDecimal = true;
 let outputDisplay = "";
 let inputDisplay = "";
+let operationType = "";
 let operationPressed = "";
 let result = null;
 
+/* Math Calculations after being pressed */
+const mathCalculation = () => {
+    if (operationPressed === "/") {
+        result = parseFloat(result) / parseFloat(inputDisplay)
+    } else if (operationPressed === "x") {
+        result = parseFloat(result) * parseFloat(inputDisplay)
+    } else if (operationPressed === "-") {
+        result = parseFloat(result) - parseFloat(inputDisplay)
+    }  else if (operationPressed === "+") {
+        result =  parseFloat(result) + parseFloat(inputDisplay)
+    } 
+};
 
-/* turning buttons into numbers to be displayed in input */
+
+/* Turning buttons into numbers to be displayed in input */
 numbers.forEach((num) => {
     num.addEventListener('click', (event) => {
-        inputDisplay += event.target.innerText
+        inputDisplay += event.target.innerHTML
         input.value = inputDisplay
     })
  });
 
- console.log(numericalOperations)
- 
-
- /* What happens when a button is pressed */
+ /* What happens when a Operation is pressed */
 numericalOperations.forEach((operation) => {
     operation.addEventListener('click', (event) => {
-        if(!inputDisplay) return
-        const operationType = event.target.innerText
-        if (outputDisplay && inputDisplay && lastOperation){
-            mathCalculation()
-        } else {
-            result = parseFloat(inputDisplay)
-        }
+        operationType = event.target.innerHTML
+        outputDisplay && inputDisplay && operationPressed ?  mathCalculation() : result = parseFloat(inputDisplay);
         moveInput(operationType)
-        console.log(result)
+        operationPressed = operationType;
      })
  })
 
  /*  Moving input from input to output after being pressed */
- const moveInput = (name = "") => {
-    outputDisplay += inputDisplay  + " " + name + " ";
+ const moveInput = (value) => {
+    value ? outputDisplay += `${inputDisplay} ${value} ` : outputDisplay += `${inputDisplay} `;
     output.value = outputDisplay;
     input.value = "";
     inputDisplay = "";
 }
-/* Math Calculations after being pressed */
-const mathCalculation = () => {
-    if (operationPressed == "/") {
-        parseFloat(result) /= inputDisplay
-    } else if (operationPressed == "x") {
-        parseFloat(result) *= inputDisplay
-    } else if (operationPressed == "-") {
-        parseFloat(result) -= inputDisplay
-    }  else if (operationPressed == "+") {
-        parseFloat(result) += inputDisplay
-    } else if (operationPressed == "x") {
-        parseFloat(result) *= inputDisplay
-    }
-};
+
+
+/* Backspace button functionality */
+backSpace.addEventListener("click", (event) => {
+    input.value = "" 
+    inputDisplay = "" 
+});
+
+
+/* All Clear button functionality */
+clear.addEventListener("click", () => {
+    input.value = ""
+    inputDisplay = ""
+    outputDisplay = ""
+    output.value = ""
+    result = ""
+});
+
+
+/* Equal button functionality */
+equals.addEventListener("click", () => {
+    mathCalculation();
+    moveInput()
+    input.value = result;
+    inputDisplay = result;  
+    outputDisplay = "";
+});
+
+/* Percentage button functionality */
+percentage.addEventListener("click", () => {
+    input.value = `${input.value * 100}%`
+});
 
 
 
- /* button visibility after click 
+
+
+
+
+
+
+
+
+ /* Failed test area
+ 
+ button visibility after click 
  buttons.map(button => {
     button.addEventListener('click', (event) => {
         event.preventDefault()

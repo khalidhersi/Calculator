@@ -28,6 +28,15 @@
         .landscape__buttons {
            background-color: $sixth-color;
         }
+        .numbers:active {
+            background-color: rgb(179, 179, 179);
+        }
+        .grid__items:active {
+            background-color: rgb(255, 208, 122);
+        }
+        .symbols:active {
+            background-color: rgb(255, 255, 255);
+        }
         
 
     }
