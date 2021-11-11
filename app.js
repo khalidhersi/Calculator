@@ -104,6 +104,8 @@ percentage.addEventListener("click", () => {
 
 
 
+
+
  /* Failed test area
  
  button visibility after click 
