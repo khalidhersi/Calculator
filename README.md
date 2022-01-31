@@ -1,7 +1,11 @@
-The 1st HTML, CSS & JS project
+# IPhone Calculator Clone 
 
-We are expected to create a calculator that is mobile and desktop interactive and is fully functioning.
+### Author - Khalid Hersi 
+A simple calculator made with HTML, CSS and JavaScript
 
-Javascript will be used to do all the calculations and interactions with th DOM.
+## General Info
+This calculator was made during the third week of my _nology course where we were taught how to use arrow functions and event listeners to interact with objects on the webpage (DOM).
+I made this iPhone calculator clone using vanilla JavaScript. Using DOM manipulation I was able to create a fully functioning calculator that handles basic arithmetic. 
 
-the project is set to take no less then 10 hours and must have atleast 10 commits to github via git.
+### Technologies used
+HTML, CSS, SCSS, JavaScript 
